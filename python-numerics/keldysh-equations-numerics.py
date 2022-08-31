@@ -338,12 +338,13 @@ checkmax(c1.imag)
 checkmax(c2.imag)
 checkmax(c3.imag)
 
-plt.subplot(224)
-plt.plot(t_, np.imag(np.diagonal(SRt[0, 0, :, 0])))
-plt.plot(t_, np.imag(np.diagonal(SRt[0, 1, :, 1])))
-plt.plot(t_, np.imag(np.diagonal(SRt[0, 1, :, 0])))
-plt.plot(t_, np.imag(np.diagonal(SRt[0, 0, :, 1])))
-# plt.axhline(-vcoulomb, c='gray', lw=0.4)
+if vcoulomb != 0:
+    plt.subplot(224)
+    plt.plot(t_, np.imag(np.diagonal(SRt[0, 0, :, 0])))
+    plt.plot(t_, np.imag(np.diagonal(SRt[0, 1, :, 1])))
+    plt.plot(t_, np.imag(np.diagonal(SRt[0, 1, :, 0])))
+    plt.plot(t_, np.imag(np.diagonal(SRt[0, 0, :, 1])))
+    # plt.axhline(-vcoulomb, c='gray', lw=0.4)
 
 
 # %%
